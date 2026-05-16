@@ -1,0 +1,19 @@
+title: Suspicious PowerShell Activity
+id: 1d7f4b8a-1111-2222-3333-abcdef123456
+status: experimental
+description: Detects suspicious PowerShell command execution
+author: Siddheshwar
+date: 2026/05/16
+
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  selection:
+    Image|endswith: '\powershell.exe'
+    CommandLine|contains: '-Command'
+
+  condition: selection
+
+level: high
