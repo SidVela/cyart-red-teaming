@@ -1,4 +1,22 @@
-# Elasticsearch Service Configuration
+## Security Configuration
+
+Elasticsearch 8.x uses HTTPS and authentication by default.
+
+### Password Reset Command
+
+```bash
+sudo /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
+```
+
+### Secure Connection Test
+
+```bash
+curl -k -u elastic https://localhost:9200
+```
+
+## Verification
+
+Successfully authenticated and received Elasticsearch JSON response.# Elasticsearch Service Configuration
 
 ## Objective
 Configure and start Elasticsearch service for threat hunting setup.
